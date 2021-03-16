@@ -3,3 +3,13 @@ O que eu vou aprender na Trybe:
 - Unix
 - Bash
 - Git
+<<<<<<< HEAD
+=======
+=======
+ trybe-skills-changes
+- HTML
+- CSS
+=======
+trybe-skills-updates
+- React
+>>>>>>> 1f28a3c9f5ff157758f55e880bedd89d479ff2e9
