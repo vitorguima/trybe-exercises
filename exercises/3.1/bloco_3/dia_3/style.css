@@ -1,3 +1,16 @@
 div:hover{
     border:5px solid red;
+    font-family: 'monospace',sans-serif;
+}
+
+h3:active{
+    background-color:rgb(15, 15, 15);
+}
+
+div:nth-child(odd){
+    font-style:italic;
+}
+
+div:nth-child(even){
+    font-style:normal;
 }
