@@ -1,17 +1,3 @@
-h1, p{
-    text-align: center;
-}
-
-li:hover{
-    background-color: yellow;
-}
-
-li:active{
-    font-family: fantasy;
-    color:red;
-    font-size: larger;
-}
-
-.list-dots{
-    list-style:none;
+div:hover{
+    border:5px solid red;
 }
