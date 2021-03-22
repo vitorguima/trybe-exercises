@@ -11,6 +11,10 @@ div:nth-child(odd){
     font-style:italic;
 }
 
-div:nth-child(even){
+div.ol:nth-child(even){
     font-style:normal;
 }
+
+
+
+1 - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado primo, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
