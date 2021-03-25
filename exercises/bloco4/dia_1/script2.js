@@ -127,41 +127,43 @@
 //     console.log('false)
 // }
 
-// // exercício 9 ----------_> pendente!!
+// // exercício 9
 
-// let a = 7;
-// let b = 3;
-// let c = 1;
-// let mult = a * b * c
+// let a = 2;
+// let b = 4;
+// let c = 6;
 
-// if ((mult % 2) != 0) {
-//     console.log ('ímpar');
+// if ((a % 2) + (b % 2) + (c % 2) != 0) {
+//     console.log ('true');
 // }
 // else {
-//     console.log('par');
+//     console.log ('false');
 // }
+
 
 // exercício 10
 
-let productSell = 1500;
-let productCost = 1200;
-const quantity = 1000; 
-let productTotalCost = productCost + (0.2 * productCost);
-let stonks = (productSell - productTotalCost) * quantity;
+// let productSell = 1500;
+// let productCost = 1200;
+// const quantity = 1000; 
+// let productTotalCost = productCost + (0.2 * productCost);
+// let stonks = (productSell - productTotalCost) * quantity;
 
 
-if (stonks > 0 && productSell > 0 && productCost  > 0) {
-    console.log('O valor praticados resultarão em um lucro é', stonks);
-}
-else if (stonks < 0 && productSell > 0 && productCost > 0) {
-    console.log('os valores praticados resultarão em um prejuízo de', stonks);
-}
-else if (stonks < 0 && productSell < 0 || productCost < 0) {
-    console.log ('não são permitidos valores negativos para venda ou custo')
-}
-else {
-    console.log('erro na formatação de números inseridos: verificar custo e venda')
-}
+// if (stonks > 0 && productSell > 0 && productCost  > 0) {
+//     console.log('O valor praticados resultarão em um lucro é', stonks);
+// }
+// else if (stonks < 0 && productSell > 0 && productCost > 0) {
+//     console.log('os valores praticados resultarão em um prejuízo de', stonks);
+// }
+// else if (stonks < 0 && productSell < 0 || productCost < 0) {
+//     console.log ('não são permitidos valores negativos para venda ou custo')
+// }
+// else {
+//     console.log('erro na formatação de números inseridos: verificar custo e venda')
+// }
+
+// Exercício 11
 
 
 
