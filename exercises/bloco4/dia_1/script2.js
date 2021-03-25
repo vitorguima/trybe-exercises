@@ -146,7 +146,7 @@
 // let productSell = 1500;
 // let productCost = 1200;
 // const quantity = 1000; 
-// let productTotalCost = productCost + (0.2 * productCost);
+// let productTotalCost = productCost * 1.2;
 // let stonks = (productSell - productTotalCost) * quantity;
 
 
@@ -164,6 +164,33 @@
 // }
 
 // Exercício 11
+let inssTax;
+let irTax;
+let grossRevenue = 3000;
+
+if (grossRevenue <= 1556.94) {
+  inssTax = grossRevenue * 0.08;
+} else if (grossRevenue <= 2594.92) {
+  inssTax = grossRevenue * 0.09;
+} else if (grossRevenue <= 5189.82) {
+  inssTax = grossRevenue * 0.11;
+} else {
+  inssTax = 570.88
+}
+
+let baseRevenue = grossRevenue - inssTax;
+
+if (baseRevenue <= 1903.98) {
+  console.log (grossRevenue)
+} else if (baseRevenue <= 2826.65) {
+  console.log (baseRevenue - ((0.075 * baseRevenue) - 142.80));
+} else if (baseRevenue <= 3751.05) {
+  console.log (baseRevenue - ((0.15 * baseRevenue) - 354.80));
+} else if (baseRevenue <= 4464.68) {
+  console.log (baseRevenue - ((0.2275 * baseRevenue) - 636.13));
+} else {
+  console.log (baseRevenue - ((0.275 * baseRevenue) - 869.36));
+}
 
 
 
