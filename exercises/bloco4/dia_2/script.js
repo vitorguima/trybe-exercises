@@ -1,39 +1,41 @@
-// Obtenha o valor "Serviços" do array menu :
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-// let menuServices = menu[1];
+// Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
+// for (let index = 0; index < numbers.length; index += 1) {
+//     console.log(numbers[index]);
+// }
 
-// console.log(menuServices);
+// Para o segundo exercício, você deve somar todos os valores contidos no array e imprimir o resultado;
+// let result = 0;
 
-// Procure o índice do valor "Portfólio" do array menu :
+// for (let index = 0; index < numbers.length; index += 1) {
+//     result += numbers[index];
+// }
 
-// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-// let indexOfPortfolio = menu.indexOf('Portfólio');
+// console.log('o resultado é ' + result);
 
-// console.log(indexOfPortfolio);
+// Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+// A média aritmética é o resultado da soma de todos os elementos divido pelo número total de elementos.
+let result = 0;
+let median = result / numbers.length
 
-// Adicione o valor "Contato" no final do array menu :
-
-// let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-
-// menu.push('Contato');
-
-// console.log(menu);
-
-// Aula for
-
-//  Utilize o for para imprimir os elementos da lista groceryList com o console.log() :
-
-let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
-
-for (let index = 0; index < groceryList.length; index += 1) {
-    console.log(groceryList[index])
+for (let index = 0; index < numbers.length; index += 1) {
+    result += numbers[index];
 }
 
-// Utilize o for/of para imprimir os elementos da lista names com o console.log() :
-
-let names = ['João', 'Maria', 'Antônio', 'Margarida'];
-
-for (let name of names) {
-    console.log(name)
+if (median > 20); {
+    console.log('valor maior que 20');
+} else {
+    console.log('valor menor ou igual a 20');
 }
+
+
+// Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+
+
+// Utilizando for , descubra qual o maior valor contido no array e imprima-o;
+// Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+// Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+// Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
+// Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
