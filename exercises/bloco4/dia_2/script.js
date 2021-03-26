@@ -88,21 +88,21 @@
 
 // Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
 
-let newArray = []
+// let newArray = []
 
-for (let index = 0; index < 26; index += 1) {
-  newArray.push(index);
-}
+// for (let index = 0; index < 26; index += 1) {
+//   newArray.push(index);
+// }
 
-console.log (newArray);
+// console.log (newArray);
 
-// Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+// // Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
 
 
-let newArray = []
+// let newArray = []
 
-for (let index = 0; index < 26; index += 1) {
-  newArray.push(index);
-  console.log (index / 2);
-}
+// for (let index = 0; index < 26; index += 1) {
+//   newArray.push(index);
+//   console.log (index / 2);
+// }
 
