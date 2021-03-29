@@ -106,3 +106,52 @@
 //   console.log (index / 2);
 // }
 
+
+// Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. 
+// Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro valor) e 9 (valor seguinte).
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let newArray = [];
+
+for (let index = 0; index < numbers.length; index += +1) {
+  if (index + 1 < numbers.length) {
+    newArray.push(numbers[index] * numbers[index + 1]);
+  } else {
+    newArray.push(numbers[index] * 2)
+  }
+}
+
+console.log(newArray);
+
+
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (numbers[index] < numbers[secondIndex]) {
+//       let position = numbers[index];
+//       numbers[index] = numbers[secondIndex];
+//       numbers[secondIndex] = position;
+//     }
+//   }
+// }
+
+// console.log(numbers);
+
+
+
+
+// for (let index = 0; index < numbers.length; index += 1) {
+//   minValue = numbers[index];
+
+//   for (let possibleIndex = 0; possibleIndex < numbers.length; possibleIndex += 1) {
+//     possibleMinValue = numbers[possibleIndex];
+
+//     if (possibleMinValue < minValue) {
+//       minValue = possibleMinValue;
+//     }
+//   }
+// }
+
+
+
+
