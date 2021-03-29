@@ -1,20 +1,16 @@
-let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  recorrente: 'Sim',
-};
+// exercícios parte 2 - Funções
 
-let info2 = {
-  personagem: 'Tio Patinhas',
-  origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
-  nota: 'O último MacPatinhas',
-  recorrente: 'Sim',
-};
+function checkPalindrome(wordChecked) {
+  let palindromWord = false;
 
+  if (wordChecked[0] === wordChecked[wordChecked.length - 1] && wordChecked[1] === wordChecked[wordChecked.length - 2] && wordChecked.length % 2 != 0) {
+    palindromWord = true;
+  } else {
+    palindromWord = false;
+  }
 
-for (let index in info, info2) {
-  console.log(index,': ' + info[index] + ' e ' + info2[index])
+  return palindromWord;
 }
 
-  
+console.log(checkPalindrome('ele'))
+
