@@ -17,12 +17,24 @@ let romanNumbers = {
   M: 1000,
 }
 
-// for (let index in romanNumbers) {
-//   console.log(index, romanNumbers[index]);
-// }
+// IVMXVV = -4 + 1000 + 10 + 5 + 5 = 1016
 
-// IVMXVV = -4 + 1000 + 10 + 5 + 5;
+let romanNumber = 'IVXVVM'
+let decimalNumber = 0;
 
-let romanNumber = 'IVXVVM' 
+for (let key in romanNumbers) {
+  
+for (let index in romanNumber) {
+  if (romanNumbers[romanNumber[index + 1]] > romanNumbers[romanNumber[index]]) {
+    decimalNumber = romanNumbers[romanNumber[index + 1]] - romanNumbers[romanNumber[index]];
+  } else {
+    decimalNumber = romanNumbers[romanNumber[index + 1]] + romanNumbers[romanNumber[index]];
+  }
 
-console.log(romanNumbers.length)
+  decimalNumber += decimalNumber;
+}
+}
+console.log(decimalNumber);
+
+
+// p/ trazer o valor de um objeto = romamNumbers['id']
