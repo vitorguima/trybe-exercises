@@ -11,7 +11,7 @@ function returnHigherValue(array) {
   for (let index = 0; index < array.length; index += 1) {
 
     for (let index2 = 0; index2 < array.length; index2 += 1) {
-      let possibleValueCount1 =  0;
+      let possibleValueCount1 = 0;
       let possibleValueCount2 = 0;
       let possibleValue = 0;
 
@@ -20,15 +20,16 @@ function returnHigherValue(array) {
         possibleValueCount2 = possibleValueCount1;
         higherValue = array[index2];
         possibleValue = higherValue;
-        
-        if (possibleValueCount2  > possibleValueCount1 && possibleValue > higherValue) {
+
+        if (possibleValueCount2 > possibleValueCount1) {
           higherValue = possibleValue
         }
-    } } 
+      }
+    }
     return (higherValue);
   }
 }
-  console.log(returnHigherValue(integerArray));
+console.log(returnHigherValue(integerArray));
 
 
   // se a contagem de igualdade para um número A for maior que de B, devemos manter A, caso contrário, mantemos B
