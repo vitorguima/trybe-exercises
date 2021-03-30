@@ -1,14 +1,14 @@
-// exercicio 6 pt - 2
-// Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
+// exercicio 7 pt - 2
+// Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
 
-let number = 4;
-
-function sumArrayUntilnumber(number) {
-  let sumAllNumbers = 0;
-  for (let i = 1; i <= number; i += 1) {
-    sumAllNumbers += i;
+function verifyWordFinal (word, ending) {
+  let wordVerify = false;
+  if (word[word.length - 2] + word[word.length - 1] == ending) {
+    wordVerify = true;
+  } else {
+    wordVerify = false;
   }
-  return sumAllNumbers;
+  return wordVerify;
 }
 
-console.log(sumArrayUntilnumber(number))
+console.log(verifyWordFinal('trybe','be'))
