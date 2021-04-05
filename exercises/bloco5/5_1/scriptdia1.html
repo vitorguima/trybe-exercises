@@ -67,7 +67,15 @@
     }
 
     changeCenterContent('center-content');
+
 // Crie uma função que corrija o texto da tag <h1>.
+    function firstTitleAjust(element) {
+      let heroTitle = document.getElementsByClassName(element);
+      heroTitle[0].innerText = 'Exercício 5.1 - Javascript';
+    }
+
+    firstTitleAjust('title');
+
 // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 
