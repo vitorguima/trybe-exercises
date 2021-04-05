@@ -1,75 +1,28 @@
-// // prática aula
-// // Objetos
+// 4.4 - exercício bônus - 1
+// Faça um programa que receba uma string em algarismos romanos e retorne o número que a string representa.
+// Atenção! Quando você tem um número pequeno à direita de um número grande, eles devem ser somados. Exemplo: XI = 10 + 1 = 11. No entanto, se o número pequeno está à esquerda de um número maior que ele, ele deve ser subtraído. Exemplo: IX = 10 - 1 = 9.
 
-// let player = {
-//     name: 'Marta',
-//     lastName: 'Silva',
-//     age: 34,
-//     medals: {
-//         golden: 2,
-//         silver: 3,
-//     },
-//     bestInTheWorld:[2006, 2007, 2008, 2009, 2010, 2018]
-// };
+let romanNumbers = {
+  I: 1,
+  V: 5,
+  IX: 9,
+  X: 10,
+  XL: 49,
+  L: 50,
+  XC: 90,
+  C: 100,
+  CD: 400,
+  D: 500,
+  CM: 900,
+  M: 1000,
+}
 
-// console.log('A jogadora ' + player.name + ' ' + player.lastName + ' ' + 'foi eleita a melhor do mundo por ' + player.bestInTheWorld.length + ' veses.')
-
-// console.log ('A jogadora possui ' + player.medals.golden + ' medalhas de ouro e ' + player.medals.silver + ' medalhas de prata')
-
-
-// for/in
-
-// let names = {
-//     person1: 'João',
-//     person2: 'Maria',
-//     person3: 'Jorge' 
-//   } 
-
-// for (let index in names) {
-//     console.log(index, names[index]);
+// for (let index in romanNumbers) {
+//   console.log(index, romanNumbers[index]);
 // }
 
-// let carro = {
-//     model: 'A3 Sedan',
-//     manufacturer: 'Audi',
-//     year: 2020
-//   }
+// IVMXVV = -4 + 1000 + 10 + 5 + 5;
 
-//   for (let index in carro) {
-//       console.log(index, carro[index])
-//   }
+let romanNumber = 'IVXVVM' 
 
-
-  function triangle(n) {
-    if (n % 2 === 0) throw new Error('not an odd number');
-    
-    let t = [];
-    let numberOfRows = Math.ceil((n / 2));
-    let middleChar = Math.floor((n / 2));
-    
-    for (let rowIndex = 0; rowIndex < numberOfRows; rowIndex++) {
-      let rowTemplate = new Array(n).fill(' ');
-      let rowOffsetFromBase = numberOfRows - rowIndex;
-      
-      if (rowIndex === 0 /* is top */) {
-          t[rowIndex] = new Array(n).fill(' ')
-          t[rowIndex][middleChar] = '*'
-      } else if (rowIndex === (numberOfRows - 1) /* is base */) {
-          t[rowIndex] = new Array(n).fill('*');
-      } else {
-          // is middle rows
-          let headIndex =  middleChar - rowIndex;
-          let tailIndex =  middleChar + rowIndex;
-      
-          t[rowIndex] = new Array(n).fill(' ');
-          t[rowIndex][headIndex] = '*'
-          t[rowIndex][tailIndex] = '*'
-      }
-      
-      t[rowIndex] = t[rowIndex].join('');
-    }
-    
-    return t.join('\n');
-  }
-  
-  console.log(triangle(7));
+console.log(romanNumbers.length)
