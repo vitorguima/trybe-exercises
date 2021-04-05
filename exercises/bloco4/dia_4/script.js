@@ -24,6 +24,8 @@ let decimalNumber = 0;
 
 for (let key in romanNumbers) {
   
+}
+
 for (let index in romanNumber) {
   if (romanNumbers[romanNumber[index + 1]] > romanNumbers[romanNumber[index]]) {
     decimalNumber = romanNumbers[romanNumber[index + 1]] - romanNumbers[romanNumber[index]];
@@ -33,7 +35,7 @@ for (let index in romanNumber) {
 
   decimalNumber += decimalNumber;
 }
-}
+
 console.log(decimalNumber);
 
 
