@@ -87,7 +87,14 @@
     paragraphUpperCase('p');
 
 // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+  function showInner(element) {
+    let innerContent = document.getElementsByTagName(element);
+    for (let index = 0; index < innerContent.length; index += 1) {
+      console.log(innerContent[index].innerText);
+    }
+  }
 
+  showInner('p');
   </script>
 </body>
 
