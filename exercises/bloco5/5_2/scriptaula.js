@@ -41,5 +41,11 @@ son1.innerText = 'exercicio 2 pt 2';
 let elemento10 = document.querySelector('#elementoOndeVoceEsta').appendChild(son1);
 
 // Crie um filho para primeiroFilhoDoFilho .
+let son2 = document.createElement('p');
+son2.innerText = 'exercicio 3 pt 2';
+son2.className = 'paragrafo-filho-do-filho'
+let elemento11 = document.querySelector('#primeiroFilhoDoFilho').appendChild(son2);
 
 // A partir desse filho criado, acesse terceiroFilho .
+let elemento12 = document.querySelector('.paragrafo-filho-do-filho').parentElement.parentElement.parentElement.firstElementChild.nextElementSibling.nextElementSibling;
+console.log(elemento12);
