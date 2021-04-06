@@ -66,52 +66,38 @@
 // }
 
 
-// exercío 5
+// exercicio 5
 
-// let n = 7;
-// let symbol = '*';
-// let printScreen = '';
+// meio-altura = 4
+// meio-base = 4
 
-// let midOfLine = (n + 1) / 2;
-// let leftPosition = midOfLine;
-// let rightPosition = midOfLine;
+let symbol = '*';
+let emptySpace = ' ';
+let n = 7;
+let midPositionHeight = (n + 1) / 2;
+let midPositionWidth = (n + 1) / 2;
+let leftPosition = midPositionWidth;
+let rightPosition = midPositionWidth;
 
-// for (let index = 0; index <= midOfLine; index += 1) {
-//   for (let index2 = 0; index2 < n; index2 += 1) {
-//     if (index2 > leftPosition && index2 < rightPosition ) {
-//       printScreen += symbol;
-//     } else if (index2 < leftPosition && index2 > rightPosition {
-//       printScreen += 
-//     }
-//     }
+// 1a linha:  '' '' '' * '' '' ''
+// 2a linha:  '' '' *  '' * '' ''
+// 3a linha:  '' *  '' '' '' * ''
+// 4a linha:  *  *  *  *  *  *   *  
+
+// esquerda para direita - 1a linha
+// for (let index = 1; index <= midPositionHeight; index += 1) {
+//   let printPyramid = '';
+//   for (let index2 = 1; index2 <= n; index2 += 1){
+//   if (index2 == leftPosition || index2 == rightPosition || index == midPositionHeight ) {
+//     printPyramid += symbol;
+//   } else {
+//     printPyramid += emptySpace;
 //   }
-//   console.log(printScreen);
-//   printScreen = '';
-//   leftPosition += 1;
-//   rightPosition -= 1;
+//   }
+//   leftPosition -= 1;
+//   rightPosition += 1;
+//   console.log(printPyramid);
 // }
 
+// exercicio 6
 
-
-
-let n = 5;
-let symbol = '*';
-let inputLine = '';
-
-let midOfMatrix = (n + 1) / 2;
-let controlLeft = midOfMatrix;
-let controlRight = midOfMatrix;
-
-for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
-  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
-    if (columnIndex > controlLeft && columnIndex < controlRight) {
-      inputLine = inputLine + symbol;
-    } else {
-      inputLine = inputLine + ' ';
-    }
-  }
-  console.log(inputLine);
-  inputLine = '';
-  controlRight += 1;
-  controlLeft -= 1
-};
