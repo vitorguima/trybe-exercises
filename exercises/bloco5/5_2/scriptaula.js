@@ -29,3 +29,17 @@ console.log(elemento7);
 // Agora acesse o terceiroFilho a partir de pai .
 let elemento8 = document.querySelector('#pai').firstElementChild.nextElementSibling.nextElementSibling;
 console.log(elemento8);
+
+// Crie um irmão para elementoOndeVoceEsta
+let brother1 = document.createElement('div');
+brother1.innerText = 'exercicio 1 pt 2';
+let elemento9 = document.querySelector('#pai').appendChild(brother1);
+
+// Crie um filho para elementoOndeVoceEsta .
+let son1 = document.createElement('p');
+son1.innerText = 'exercicio 2 pt 2';
+let elemento10 = document.querySelector('#elementoOndeVoceEsta').appendChild(son1);
+
+// Crie um filho para primeiroFilhoDoFilho .
+
+// A partir desse filho criado, acesse terceiroFilho .
