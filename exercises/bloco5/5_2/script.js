@@ -2,6 +2,7 @@ let bodyElement = document.querySelector('body');
 
 //1 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 let heroTitle = document.createElement('h1');
+heroTitle.className = 'title';
 heroTitle.innerText = 'Exercício 5.2 - JavaScript DOM';
 
 bodyElement.appendChild(heroTitle);
@@ -65,9 +66,13 @@ listItem('item10','dez');
 
 // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 let firstSubtitle = document.createElement('h3');
+firstSubtitle.class = 'description';
 let secondSubtitle = document.createElement('h3');
+secondSubtitle.class = 'description';
 let thirdSubtitle = document.createElement('h3');
+thirdSubtitle.class =  'description';
 
 mainContent.appendChild(firstSubtitle);
 mainContent.appendChild(secondSubtitle);
 mainContent.appendChild(thirdSubtitle);
+
