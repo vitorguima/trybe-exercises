@@ -10,6 +10,7 @@ bodyElement.appendChild(heroTitle);
 //2 Adicione a tag div com a classe main-content como filho da tag body ;
 let mainContent = document.createElement('div');
 mainContent.className = 'main-content';
+mainContent.style.backgroundColor = 'green';
 
 bodyElement.appendChild(mainContent);
 
@@ -33,6 +34,7 @@ mainContent.appendChild(leftContent);
 //6 Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
 let rightContent = document.createElement('div');
 rightContent.className =  'right-content';
+rightContent.style.marginRight = 'auto';
 
 mainContent.appendChild(rightContent);
 
@@ -66,13 +68,29 @@ listItem('item10','dez');
 
 // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 let firstSubtitle = document.createElement('h3');
-firstSubtitle.class = 'description';
+firstSubtitle.className = 'description';
+firstSubtitle.innerHTML = 'show';
 let secondSubtitle = document.createElement('h3');
-secondSubtitle.class = 'description';
+secondSubtitle.className = 'description';
+secondSubtitle.innerHTML = 'show';
 let thirdSubtitle = document.createElement('h3');
-thirdSubtitle.class =  'description';
+thirdSubtitle.className =  'description';
+thirdSubtitle.innerHTML = 'show';
 
 mainContent.appendChild(firstSubtitle);
 mainContent.appendChild(secondSubtitle);
 mainContent.appendChild(thirdSubtitle);
 
+// let removeDivFive = document.querySelector('.left-content');
+// removeDivFive.remove();
+
+mainContent.removeChild(leftContent);
+
+// Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+
+
+// Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+// Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+unorderedList.lastChild.remove();
+unorderedList.lastChild.remove();
