@@ -101,3 +101,31 @@ let rightPosition = midPositionWidth;
 
 // exercicio 6
 
+// Faça um programa que diz se um número definido numa variável é primo ou não.
+// Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele com quaisquer outros números dá resto diferente de zero.
+// Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
+
+let number = 7;
+let modulesEqualZero = 0;
+let arrayOfModules = [];
+let firstLastIndexCheck = ''; 
+
+for (let divisor = 1; divisor <= number; divisor += 1) {
+  arrayOfModules.push(number % divisor);
+} 
+
+for (let index = 0; index < arrayOfModules.length; index += 1) {
+  if (arrayOfModules[index] == 0) {
+    modulesEqualZero += 1;
+  }
+}
+
+if (arrayOfModules[0] == 0 && arrayOfModules[arrayOfModules.length - 1] == 0) {
+  firstLastIndexCheck = 'ok';
+}
+
+if (modulesEqualZero == 2 && firstLastIndexCheck == 'ok') {
+  console.log('o número é primo');
+} else {
+  console.log('o número não é primo');
+}
