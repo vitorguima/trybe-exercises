@@ -81,16 +81,8 @@ mainContent.appendChild(firstSubtitle);
 mainContent.appendChild(secondSubtitle);
 mainContent.appendChild(thirdSubtitle);
 
-// let removeDivFive = document.querySelector('.left-content');
-// removeDivFive.remove();
 
 mainContent.removeChild(leftContent);
-
-// Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
-
-
-// Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
-// Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 
 unorderedList.lastChild.remove();
 unorderedList.lastChild.remove();
