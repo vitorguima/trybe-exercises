@@ -17,58 +17,59 @@
 	<main>
 		<form id="user-register">
 			<fieldset>
-				<div>
-					<label for="name">Nome</label>
-					<input type="text" maxlength="40" required id="name">
+				<div class="mb-3">
+					<label class="form-label" for="name">Nome</label>
+					<input class="form-control form-control-sm" type="text" maxlength="40" required id="name" placeholder="Insira seu nome">
 				</div>
-				<div>
-					<label for="email">Email</label>
-					<input type="text" maxlength="50" required id="email">
+				<div class="mb-3">
+					<label class="form-label" for="email">Email</label>
+					<input class="form-control form-control-sm" type="text" maxlength="50" required id="email" placeholder="Insira seu email">
 				</div>
-				<div>
-					<label for="cpf">CPF</label>
-					<input type="text" maxlength="11" required id="cpf">
+				<div class="mb-3">
+					<label class="form-label" for="cpf">CPF</label>
+					<input class="form-control form-control-sm" type="text" maxlength="11" required id="cpf">
 				</div>
-				<div>
-					<label for="address">Endereço</label>
-					<input type="text" maxlength="200" required id="address">
+				<div class="mb-3">
+					<label class="form-label" for="address">Endereço</label>
+					<input class="form-control form-control-sm" type="text" maxlength="200" required id="address">
 				</div>
-				<div>
-					<label for="city">Cidade</label>
-					<input type="text" maxlength="28" required id="city">
+				<div class="mb-3">
+					<label class="form-label" for="city">Cidade</label>
+					<input class="form-control form-control-sm" type="text" maxlength="28" required id="city">
 				</div>
-				<div>
-					<label for="state">Estado</label>
-					<select id="state" required></select>
+				<div class="mb-3">
+					<label class="form-label" for="state">Estado</label>
+					<select class="form-select" id="state" required></select>
 				</div>
-				<div>
-					<label for="home-type">Tipo de imóvel</label>
-					<input type="radio" name="home-typa" id="house" value="house" required>Casa
-					<input type="radio" name="home-typa" id="apartament" value="apartament" required>Apartamento
+				<p class="form-label">Tipo de imóvel</p>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="home-typa" id="house" value="house" required>Casa
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="home-typa" id="apartament" value="apartament" required>Apartamento
 				</div>
 			</fieldset>
 			<fieldset>
-				<div>
-					<label for="resume">Resumo do currículo</label>
-					<textarea id="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+				<div class="mb-3">
+					<label class="form-label" for="resume">Resumo do currículo</label>
+					<textarea id="resume" maxlength="1000" cols="100" rows="20" required aria-label="With textarea"></textarea>
 				</div>
-				<div>
-					<label for="position">Cargo</label>
-					<input type="text" maxlength="40" required id="position">
+				<div class="mb-3">
+					<label class="form-label" for="position">Cargo</label>
+					<input class="form-control form-control-sm" type="text" maxlength="40" required id="position">
 				</div>
-				<div>
-					<label for="jobdescription">Descrição do cargo</label>
+				<div class="mb-3">
+					<label class="form-label" for="jobdescription">Descrição do cargo</label>
 					<textarea maxlength="500" required id="jobdescription"></textarea>
 				</div>
-				<div>
-					<label>Data de início
-						<input type="text" class="startdate" required id="datepicker">
-					</label>
+				<div class="mb-3">
+					<label class="form-label">Data de início</label>
+					<input class="form-control form-control-sm" type="text" class="startdate" required id="datepicker">
 				</div>
 			</fieldset>
 			<section class="form-data"></section>
-			<button type="submit" id="submit-form">Enviar</button>
-			<button type="reset" id="reset-form">Limpar</button>
+			<button class="btn btn-success" type="submit" id="submit-form">Enviar</button>
+			<button class="btn btn-danger" type="reset" id="reset-form">Limpar</button>
 		</form>
 	</main>
 	<script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
