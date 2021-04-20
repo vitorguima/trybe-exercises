@@ -57,3 +57,5 @@ function generateResumeDiv(event) {
 }
 
 submitButton.addEventListener('click', generateResumeDiv);
+
+
