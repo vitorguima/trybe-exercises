@@ -41,30 +41,34 @@ ul {
 }
 
 li {
-  margin: 10px
+  margin: 2vw;
 }
 
 footer {
-  margin: 10px;
+  margin: 2vw;
 }
 
 footer h3 {
   text-align: center;
+  font-size: 1.5em;
 }
 
 header p {
   text-align: center;
   font-weight: bold;
-  margin: 7vw;
 }
 
 article.main-content h1 {
   text-align: center;
-  margin-bottom: 7vw;
 }
 
 article.main-content h1 p {
   text-align: justify;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 
@@ -75,17 +79,17 @@ nav ul {
   padding-inline-start: 0;
 }
 
-@media screen and (max-width: 484px) {
+article.main-content h1 {
+  font-size: 1.8em;
+}
+
+@media screen and (max-width: 600px) {
   h2 {
     font-size: 1.3em;
     margin-bottom: 8vw;
   }
 
   header p {
-    font-size: 1.8em;
-  }
-
-  article.main-content h1 {
     font-size: 1.8em;
   }
 
@@ -97,20 +101,45 @@ nav ul {
     font-size: 1em;
   }
 
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
   a:hover {
     text-decoration: underline;
   }
 
   nav {
-    height: 15vw;
+    height: 10vw;
+  }
+
+  nav ul {
+    font-size: 0.9em;
+  }
+
+  article.main-content h1 {
+    margin-bottom: 7vw;
+  }
+
+  header p {
+    margin: 7vw;
   }
 }
 
-@media screen and (width-min: 485px) and  {
+@media screen and (min-width: 601px) {
+  header p {
+    font-size: 1.8em;
+  }
   
+  nav ul {
+    font-size: 0.7em;
+  }
+
+  nav {
+    height: 7vw;
+  }
+
+  li {
+    margin: 2vw;
+  }
+  
+  footer {
+    margin: 2vw;
+  }
 }
