@@ -27,3 +27,34 @@ const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 const sortedArray = (array) => `Os números ${array.sort((a,b) => a-b)} se encontram ordenados de forma crescente!`;
 
 console.log(sortedArray(oddsAndEvens));
+
+// parte 2
+// 1 Crie uma função que receba um número e retorne seu fatorial.
+
+const returnFactorial = (number) => {
+  let factorial = 1;
+  for (let index = 1; index <= number; index += 1) {
+    factorial *= index;
+  }
+  console.log(factorial);
+}
+
+// 2 Crie uma função que receba uma frase e retorne qual a maior palavra.
+
+const returnBiggestWord = (phrase) => {
+  let wordsArray = phrase.split(' ');
+  let maxLength = 0;
+  let biggestWord = '';
+
+  for (let index = 0; index < wordsArray.length; index += 1) {
+    let possibleWord = wordsArray[index];
+
+    if (possibleWord.length > maxLength) { 
+      biggestWord = possibleWord;
+      maxLength = possibleWord.length;
+    }
+  }
+  return biggestWord;
+}
+
+console.log(returnBiggestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
