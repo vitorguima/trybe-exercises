@@ -17,6 +17,7 @@ window.onload = function start() {
   sumClicks();
 }
 
+const fiveSkills = ['JS', 'CSS', 'HTML', 'SQL', 'PBI'];
 
 // exercício 4
 const changeCharacter = (string, name) => {
@@ -32,6 +33,11 @@ const changeCharacter = (string, name) => {
   return finalPhrase.join(' ');
 }
 
+const showSkills = (string) => {
+  const intro = 'Minhas cinco principais habilidades são:';
+  let skills = fiveSkills.join(', ')
 
-console.log(changeCharacter('Tryber x aqui!', 'Vitor'));
+  return `${string} ${intro} ${skills}`;
+}
 
+console.log(showSkills(changeCharacter('Tryber x aqui!', 'Vitor')));
