@@ -37,7 +37,6 @@ const order = {
 const customerInfo = (order) => {
   const address = order['address'];
   const addressArray = Object.values(address);
-
   const client = order['name'];
   const phoneNumber = order['phoneNumber'];
   const street = addressArray[0];
@@ -50,8 +49,14 @@ const customerInfo = (order) => {
 console.log(customerInfo(order));
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
+  orderObject = order['order'];
+  pizzasObject = orderObject['pizza'];
+  drinksObject = orderObject['drinks'];
+  order.payment = 50;
+  order.name = 'Luiza Silva';
+
+  return `Olá, ${order['name']}, o total do seu pedido de ${pizzasObject[0]}, ${pizzasObject[1]} e ${drinksObject[0]} é ${order['payment']}`;
 
 }
 
-orderModifier(order);
+console.log(orderModifier(order));
