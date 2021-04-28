@@ -74,8 +74,7 @@ const totalStudents = (object) => {
   // console.log(value1['numeroEstudantes']);
 
   for (index in keysArray) {
-    let value = valuesArray[index];
-    let sumStudent = value['numeroEstudantes'];
+    let sumStudent = valuesArray[index].numeroEstudantes;
 
     totalStudents += sumStudent;
   }
@@ -102,5 +101,50 @@ const verifyPair = (object, keyName, keyValue) => {
   return object[keyName] === keyValue;
 }
 
-console.log(verifyPair(lesson3, 'turno', 'noite'));
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
+// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+
+// Bônus 1 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+
+const mathStudent = (object) => {
+  const valuesArray = Object.values(object);
+  const keysArray = Object.keys(valuesArray);
+  let mathStudents = 0;
+
+  for (index in keysArray) {
+    if (valuesArray[index].materia === 'Matemática') {
+      mathStudents += valuesArray[index].numeroEstudantes;
+    }
+  }
+
+  return mathStudents;
+}
+
+
+// console.log(mathStudent(allLessons));
+
+// Bônus 2: Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+
+console.log(allLessons);
+
+// professor = 'Maria Clara' || 'Carlos';
+
+const teacherReport = (object, professor) => {
+  const reportObject = {};
+  const valuesArray = Object.values(object);
+  const keysArray = Object.keys(object);
+  let totalStudents = 0;
+
+  for (index in keysArray) {
+    if (valuesArray[index].professor === professor) {
+      reportObject.math = valuesArray[index].materia;
+      totalStudents += valuesArray[index].numeroEstudantes;
+    }
+  }
+  
+  reportObject.students = totalStudents;
+  return reportObject;
+}
+
+console.log(teacherReport(allLessons,'Carlos'));
