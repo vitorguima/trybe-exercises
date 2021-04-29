@@ -65,29 +65,56 @@
 
 // 4 Escreva a função findTheNeedle para passar nos testes já implementados.
 
+// const assert = require('assert');
+// // escreva a função findTheNeedle aqui
+
+// const findTheNeedle = (array, value) => {
+//   for (index of array) {
+//     if (index === value) {
+//       return array.indexOf(index);
+//     }
+//   }
+//   return -1;
+// }
+
+// let words = ['house', 'train', 'slide', 'needle', 'book'];
+// let expected = 3;
+// let output = findTheNeedle(words, 'needle');
+// assert.strictEqual(output, expected);
+
+// words = ['plant', 'shelf', 'arrow', 'bird'];
+// expected = 0;
+// output = findTheNeedle(words, 'plant');
+// assert.strictEqual(output, expected);
+
+// words = ['plant', 'shelf', 'arrow', 'bird'];
+// expected = -1;
+// output = findTheNeedle(words, 'plat');
+// assert.strictEqual(output, expected);
+
+// tdd parte 3
+
+// Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
+
 const assert = require('assert');
-// escreva a função findTheNeedle aqui
 
-const findTheNeedle = (array, value) => {
-  for (index of array) {
-    if (index === value) {
-      return array.indexOf(index);
-    }
+const greetPeople = (people) => {
+  let greeting = 'Hello ';
+  let newArray = [];
+
+  for (let person of people) {
+    newArray.push(`${greeting}${person}`);
   }
-  return -1;
-}
+  return newArray;
+};
 
-let words = ['house', 'train', 'slide', 'needle', 'book'];
-let expected = 3;
-let output = findTheNeedle(words, 'needle');
-assert.strictEqual(output, expected);
+const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
 
-words = ['plant', 'shelf', 'arrow', 'bird'];
-expected = 0;
-output = findTheNeedle(words, 'plant');
-assert.strictEqual(output, expected);
+assert.strictEqual(typeof(greetPeople) === 'function', true);
+assert.strictEqual(parameter.length, result.length);
+assert.deepStrictEqual(greetPeople(parameter), result);
 
-words = ['plant', 'shelf', 'arrow', 'bird'];
-expected = -1;
-output = findTheNeedle(words, 'plat');
-assert.strictEqual(output, expected);
+
+
+
