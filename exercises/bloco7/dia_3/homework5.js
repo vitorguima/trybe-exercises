@@ -44,22 +44,50 @@
 
 // 3 Escreva a função sumAllNumbers para passar nos testes já implementados.
 
+// const assert = require('assert');
+// // escreva a função sumAllNumbers aqui
+
+// const sumAllNumbers = (array) => {
+//   let sum = 0;
+//   for (number of array) {
+//     sum += number;
+//   }
+
+//   return sum;
+// }
+
+// const numbers = [9, 23, 10, 3, 8];
+// const expected = 53;
+// const output = sumAllNumbers(numbers);
+
+// assert.strictEqual(typeof sumAllNumbers, 'function');
+// assert.strictEqual(output, expected);
+
+// 4 Escreva a função findTheNeedle para passar nos testes já implementados.
+
 const assert = require('assert');
-// escreva a função sumAllNumbers aqui
+// escreva a função findTheNeedle aqui
 
-const sumAllNumbers = (array) => {
-  let sum = 0;
-  for (number of array) {
-    sum += number;
+const findTheNeedle = (array, value) => {
+  for (index of array) {
+    if (index === value) {
+      return array.indexOf(index);
+    }
   }
-
-  return sum;
+  return -1;
 }
 
-const numbers = [9, 23, 10, 3, 8];
-const expected = 53;
-const output = sumAllNumbers(numbers);
-
-assert.strictEqual(typeof sumAllNumbers, 'function');
+let words = ['house', 'train', 'slide', 'needle', 'book'];
+let expected = 3;
+let output = findTheNeedle(words, 'needle');
 assert.strictEqual(output, expected);
 
+words = ['plant', 'shelf', 'arrow', 'bird'];
+expected = 0;
+output = findTheNeedle(words, 'plant');
+assert.strictEqual(output, expected);
+
+words = ['plant', 'shelf', 'arrow', 'bird'];
+expected = -1;
+output = findTheNeedle(words, 'plat');
+assert.strictEqual(output, expected);
