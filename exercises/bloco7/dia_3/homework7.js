@@ -1,3 +1,4 @@
+// Bônus 2
 const assert = require('assert');
 
 const factorial = (number) => {

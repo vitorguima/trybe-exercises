@@ -1,3 +1,4 @@
+// Bônus 3
 const assert = require('assert');
 
 const removeMiddle = (array) => {
