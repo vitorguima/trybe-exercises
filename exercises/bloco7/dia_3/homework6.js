@@ -40,3 +40,6 @@ expected = [200, 100, 50, 20, 10, 5, 2, 1];
 assert.deepStrictEqual(result, expected);
 
 assert.throws(() => { getChange(100, 10); }, /^Error: paid value is not enough$/);
+
+
+
