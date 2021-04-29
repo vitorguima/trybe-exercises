@@ -92,28 +92,65 @@
 // output = findTheNeedle(words, 'plat');
 // assert.strictEqual(output, expected);
 
-// tdd parte 3
+// tdd parte 3 ex 1
+
+// Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
+
+// const assert = require('assert');
+
+// const greetPeople = (people) => {
+//   let greeting = 'Hello ';
+//   let newArray = [];
+
+//   for (let person of people) {
+//     newArray.push(`${greeting}${person}`);
+//   }
+//   return newArray;
+// };
+
+// const parameter = ['Irina', 'Ashleigh', 'Elsa'];
+// const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
+
+// assert.strictEqual(typeof(greetPeople) === 'function', true);
+// assert.strictEqual(parameter.length, result.length);
+// assert.deepStrictEqual(greetPeople(parameter), result);
+
+// tdd parte 3 ex 2
 
 // Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
 
 const assert = require('assert');
+const { count } = require('console');
 
-const greetPeople = (people) => {
-  let greeting = 'Hello ';
-  let newArray = [];
+const removeVowels = (word) => {
+  const characters = word.split('');
+  const results = [];
+  let countVogals = 0;
 
-  for (let person of people) {
-    newArray.push(`${greeting}${person}`);
+  for (let index = 0; index < characters.length; index += 1) {
+    if (
+      characters[index] === 'a' ||
+      characters[index] === 'o' ||
+      characters[index] === 'i' ||
+      characters[index] === 'e' ||
+      characters[index] === 'u'
+    ) {
+      countVogals += 1
+      results.push(countVogals);
+    } else {
+      results.push(characters[index]);
+    }
   }
-  return newArray;
+  return results.join('');
 };
 
-const parameter = ['Irina', 'Ashleigh', 'Elsa'];
-const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
 
-assert.strictEqual(typeof(greetPeople) === 'function', true);
-assert.strictEqual(parameter.length, result.length);
-assert.deepStrictEqual(greetPeople(parameter), result);
+const parameter = 'Dayane';
+const result = 'D1y2n3';
+
+assert.strictEqual(typeof(removeVowels) === 'function', true);
+assert.strictEqual(removeVowels(parameter), result);
+
 
 
 
