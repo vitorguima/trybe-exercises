@@ -155,21 +155,39 @@
 
 // Use a variável parameter como parâmetro da função abaixo, escreva testes para verificar se a mesma está retornando como se vê na variável result e, caso não esteja, altere o código para que ele passe nos testes.
 
+// const assert = require('assert');
+
+// const greaterThanTen = (array) => {
+//   let results = [];
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[index] > 10) {
+//       results.push(array[index]);
+//     }
+//   }
+//   return results;
+// };
+
+// const parameter = [4, 10, 32, 9, 21];
+// const result = [32, 21];
+
+// assert.strictEqual(typeof(greaterThanTen) === 'function', true);
+// assert.deepStrictEqual(greaterThanTen(parameter), result);
+
+// tdd parte 3 ex 4
+
 const assert = require('assert');
 
-const greaterThanTen = (array) => {
-  let results = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > 10) {
-      results.push(array[index]);
-    }
-  }
+function secondThirdSmallest(array) {
+  let results = []
+  array.sort(function (x, y) 
+  {return x - y});
+  results = [array[1], array[2]];
   return results;
 };
 
-const parameter = [4, 10, 32, 9, 21];
-const result = [32, 21];
+const parameter = [4, 10, 32, 9, 21, 90, 5, 11, 8, 6];
+const result = [5, 6];
 
-assert.strictEqual(typeof(greaterThanTen) === 'function', true);
-assert.deepStrictEqual(greaterThanTen(parameter), result);
-
+assert.strictEqual(typeof(secondThirdSmallest) === 'function', true);
+assert.strictEqual(secondThirdSmallest(parameter).length, 2);
+assert.deepStrictEqual(secondThirdSmallest(parameter), result);
