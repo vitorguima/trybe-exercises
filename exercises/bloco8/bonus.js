@@ -20,30 +20,61 @@ const dragon = {
 
 const battleMembers = { mage, warrior, dragon };
 
-// dano do dragão
-const dragonDamage = (dragon) => {
+// gera dano do dragão
+const dragonAtack = (dragon) => {
   return Math.floor(Math.random() * (dragon.strength - 15)) + 15;
 }
 
-// dano do warrior
-const warriorDamage = (warrior) => {
+// gera dano do warrior
+const warriorAtack = (warrior) => {
   return Math.floor(Math.random() * (60 - warrior.strength)) + warrior.strength;
 }
 
-// dano mago + mana usada
-const manaStatus = (obj) => {
+// gera dano do mage
+const mageAtack = (obj) => {
   const mageDamage = {};
   if (obj.mana < 15) {
     mageDamage.damage = 'Não possui mana suficiente';
-  } else {mageDamage.mana = obj.mana - 15;
+  } else {mageDamage.manaSpent = 15;
   mageDamage.damage = Math.floor(Math.random() * (mage.intelligence * 2 - 45)) + 45;
   }
   return mageDamage;
 }
 
-const mageAction = (mage) => {
-  const mageStatus = manaStatus(mage);
-  return mageStatus;
+// atualiza personagens após atack do warrior
+const warriorDamage = (monster) => {
+  const warriorDamageHit = warriorAtack(warrior);
+
+  warrior.damage = warriorDamageHit;
+  monster.healthPoints = monster.healthPoints - warriorDamageHit;
 }
 
-console.log(mageAction(mage));
+// atualiza personagens após atack do mage
+const mageDamage = (monster) => {
+  const mageDamageHit = mageAtack(mage).damage;
+
+  mage.damage = mageDamageHit;
+  monster.healthPoints = monster.healthPoints - mageDamageHit;
+}
+
+// atualiza personagens após atack do dragão
+const dragonDamage = (arrayOfCharacters) => {
+  const dragonDamageHit = dragonAtack(dragon);
+  dragon.damage = dragonDamageHit;
+  for (index of arrayOfCharacters) {
+    index.healthPoints = index.healthPoints - dragonDamageHit;
+  }
+}
+
+const gameActions = {
+  warriorTurn: (monster) => warriorDamage(monster),
+  mageTurn: (monster) => mageDamage(monster),
+  dragonTurn: (Characters) => dragonDamage(Characters),
+  battleMembers: () => console.log(battleMembers),
+};
+
+gameActions.warriorTurn(dragon);
+gameActions.mageTurn(dragon);
+gameActions.dragonTurn([mage, warrior]);
+gameActions.battleMembers();
+
