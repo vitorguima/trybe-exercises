@@ -27,10 +27,10 @@ const checkRandomNumber = (number, randomNumber) => {
 
 const loteryRoutine = (number) => {
   const randomNumber = Math.floor(Math.random() * 5);
-  console.log(randomNumber);
+  console.log(randomNumber)
   return checkRandomNumber(number, randomNumber);
 }
 
-console.log(loteryRoutine(4));
+console.log(loteryRoutine(2));
 
 
