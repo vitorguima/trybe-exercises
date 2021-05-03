@@ -63,9 +63,19 @@ const books = [
   },
 ];
 
-const authorBornIn1947 = () => {
-  return books.find((book) => book.author.birthYear === 1947).author.name;
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin',
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  releaseYear: 1991,
+};
+
+function getNamedBook() {
+  return books.find((book) => book.name.length === 26);
 }
 
-assert.strictEqual(authorBornIn1947(), 'Stephen King');
-
+assert.deepStrictEqual(getNamedBook(), expectedResult);
