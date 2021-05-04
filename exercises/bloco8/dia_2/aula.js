@@ -57,15 +57,39 @@
 // console.log(verifyFirstLetter('J', listNames)); // true
 // console.log(verifyFirstLetter('x', listNames)); // false
 
-const grades = {
-  portugues: 'Aprovado',
-  matematica: 'Reprovado',
-  ingles: 'Aprovado',
-};
+// const grades = {
+//   portugues: 'Aprovado',
+//   matematica: 'Reprovado',
+//   ingles: 'Aprovado',
+// };
 
-const verifyGrades = (studentGrades) => (
-  Object.values(studentGrades).every((grade) => grade === 'Aprovado')
-);
+// const verifyGrades = (studentGrades) => (
+//   Object.values(studentGrades).every((grade) => grade === 'Aprovado')
+// );
 
-console.log(verifyGrades(grades));
+// console.log(verifyGrades(grades));
+
+const ages = [11, 9, 13, 14, 10];
+
+
+const thereIs = (array) => {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 10) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(thereIs(ages));
+
+const thereIs2 = () => {
+ages.forEach((age) => {
+  if (age > 10) {
+    return true;
+  } return false;
+})
+}
+
+console.log(thereIs2());
 
