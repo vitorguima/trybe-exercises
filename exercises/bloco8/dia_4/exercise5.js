@@ -7,12 +7,7 @@ const names = [
 ];
 
 const containsA = () => {
-  return names.toString().toLowerCase().split('').reduce((a, b,) => {
-    if (b === 'a') {
-      a += 1
-    }
-    return a;
-  },0);
+  return names.toString().toLowerCase().split('').reduce((a, b,) => b === 'a' ? a += 1: a ,0);
 }
 
 assert.deepStrictEqual(containsA(), 20);
