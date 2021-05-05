@@ -72,7 +72,4 @@ const authorWith3DotsOnName = () => {
   return books.find((book) => book.author.name === getAuthorsName).name;
 }
 
-
-console.log(authorWith3DotsOnName());
-
-// assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
