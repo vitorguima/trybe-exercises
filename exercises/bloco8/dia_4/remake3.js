@@ -69,6 +69,4 @@ function averageAge() {
   return books.map((book) => (book.releaseYear - book.author.birthYear)).reduce((a,b) => a + b) / books.length;
 }
 
-console.log(averageAge());
-
-// assert.strictEqual(averageAge(), expectedResult);
+assert.strictEqual(averageAge(), expectedResult);
