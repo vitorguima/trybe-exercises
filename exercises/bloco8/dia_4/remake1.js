@@ -19,4 +19,7 @@ const flatten2 = () => {
   return [...a, ...b, ...c];
 }
 
+
+
+
 assert.deepStrictEqual(flatten(), ['1', '2', '3', true, 4, 5, 6]);
