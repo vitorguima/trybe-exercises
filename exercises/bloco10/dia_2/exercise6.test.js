@@ -18,8 +18,7 @@ const findAnimalByName = (name) => (
 );
 
 const getAnimal = (name) => {
-  return findAnimalByName(name)
-  .then(animal => animal);
+  return findAnimalByName(name);
 };
 
 describe('Testando promise - findAnimalByName', () => {
@@ -57,8 +56,7 @@ const findAnimalByAge = (age) => (
 
 
 const getAnimalByAge = (age) => {
-  return findAnimalByAge(age)
-    .then(animal => animal);
+  return findAnimalByAge(age);
 };
 
 
