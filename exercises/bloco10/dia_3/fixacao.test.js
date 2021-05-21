@@ -1,12 +1,12 @@
 const math = require('./math.js');
 
-// test('mock função subtrair e chamada', () => {
-//   math.subtrair = jest.fn()
-//   .mockImplementation((a, b) => a - b);
+test('mock função subtrair e chamada', () => {
+  math.subtrair = jest.fn()
+  .mockImplementation((a, b) => a - b);
   
-//   expect(math.subtrair(2, 1)).toEqual(1);
-//   expect(math.subtrair).toHaveBeenCalledTimes(1);
-// });
+  expect(math.subtrair(2, 1)).toEqual(1);
+  expect(math.subtrair).toHaveBeenCalledTimes(1);
+});
 
 test('mock função multiplicar', () => {
   math.multiplicar = jest.fn()
@@ -39,13 +39,14 @@ test('mock função dividir', () => {
 })
 
 test('mock função subtrair', () => {
-  const subtrairSpied = jest.spyOn(math, 'subtrair');
+  math.subtrair.mockReset();
 
-  subtrairSpied
-  .mockReturnValueOnce(20);
+  math.subtrair = jest.fn()
+  .mockReturnValueOnce(20)
+  .mockImplementation((a, b) => a - b);
 
-  expect(subtrairSpied(2, 1)).toEqual(20);
-  expect(subtrairSpied).toHaveBeenCalledTimes(1);
-  expect(subtrairSpied(2, 1)).toEqual(1);
-  expect(subtrairSpied).toHaveBeenCalledTimes(2);
+  expect(math.subtrair(2, 1)).toEqual(20);
+  expect(math.subtrair).toHaveBeenCalledTimes(1);
+  expect(math.subtrair(2, 1)).toEqual(1);
+  expect(math.subtrair).toHaveBeenCalledTimes(2);
 })
