@@ -7,3 +7,4 @@ test('mock function generateRandom', () => {
   expect(random.generateRandom()).toEqual(10);
   expect(random.generateRandom).toHaveBeenCalledTimes(1);
 })
+
