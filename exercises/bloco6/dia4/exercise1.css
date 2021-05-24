@@ -1,0 +1,63 @@
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 3px 3px;
+	align-items: stretch;
+	text-align: justify;
+	font-size: 15px;
+	margin: 10px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+	margin-bottom: 15px;
+}
+
+@media screen and (min-width: 477px) and (max-width: 873px) {
+	body {
+		background-color: green;
+		font-size: 20px;
+	}
+
+	.figures {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	figure {
+		max-width: 70%;
+	}
+
+	.first-column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.second-column {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+}

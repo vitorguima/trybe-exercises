@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercicios de casa</title>
+	<link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body>
+	<header>
+		<h1>Exercícios tarefa dia 6.1</h1>
+	</header>
+	<main>
+		<form id="user-register">
+			<fieldset>
+				<div class="mb-3">
+					<label class="form-label" for="name">Nome</label>
+					<input class="form-control form-control-sm" type="text" maxlength="40" required id="name" placeholder="Insira seu nome">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="email">Email</label>
+					<input class="form-control form-control-sm" type="text" maxlength="50" required id="email" placeholder="Insira seu email">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="cpf">CPF</label>
+					<input class="form-control form-control-sm" type="text" maxlength="11" required id="cpf">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="address">Endereço</label>
+					<input class="form-control form-control-sm" type="text" maxlength="200" required id="address">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="city">Cidade</label>
+					<input class="form-control form-control-sm" type="text" maxlength="28" required id="city">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="state">Estado</label>
+					<select class="form-select" id="state" required></select>
+				</div>
+				<p class="form-label">Tipo de imóvel</p>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="home-typa" id="house" value="house" required>Casa
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="home-typa" id="apartament" value="apartament" required>Apartamento
+				</div>
+			</fieldset>
+			<fieldset>
+				<div class="mb-3">
+					<label class="form-label" for="resume">Resumo do currículo</label>
+					<textarea id="resume" maxlength="1000" cols="100" rows="20" required aria-label="With textarea"></textarea>
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="position">Cargo</label>
+					<input class="form-control form-control-sm" type="text" maxlength="40" required id="position">
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="jobdescription">Descrição do cargo</label>
+					<textarea maxlength="500" required id="jobdescription"></textarea>
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Data de início</label>
+					<input class="form-control form-control-sm" type="text" class="startdate" required id="datepicker">
+				</div>
+			</fieldset>
+			<section class="form-data"></section>
+			<button class="btn btn-success" type="submit" id="submit-form">Enviar</button>
+			<button class="btn btn-danger" type="reset" id="reset-form">Limpar</button>
+		</form>
+	</main>
+	<script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
