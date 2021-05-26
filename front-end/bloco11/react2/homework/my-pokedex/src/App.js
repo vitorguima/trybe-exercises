@@ -5,9 +5,10 @@ import pokemons from './data';
 
 class App extends Component {
   render() {
-  return (<div>
-  <Pokedex pokemons={pokemons} />
-  </div>)
+    return (
+      <div>
+        <Pokedex pokemons={pokemons} />
+      </div>)
   }
 }
 
