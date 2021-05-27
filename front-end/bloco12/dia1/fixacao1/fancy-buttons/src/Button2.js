@@ -4,7 +4,8 @@ class Button2 extends Component {
   constructor() {
     super()
     this.state = {
-      clickNumber: 0
+      clickNumber: 0,
+      className: 'greenButton',
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -13,11 +14,21 @@ class Button2 extends Component {
     this.setState((beforeState, _props) => ({
       clickNumber: beforeState.clickNumber + 1
     }))
+    
+    if ((this.state.clickNumber + 1) % 2 === 0) {
+      this.setState(() => ({
+        className: 'greenButton'
+      }))} else {
+        this.setState(() => ({
+          className: ''
+        }))
+      }
   }
+
 
   render() {
     return (
-      <button onClick={ this.handleClick }>{ this.state.clickNumber }</button>
+      <button className={this.state.className} onClick={ this.handleClick }>{ this.state.clickNumber }</button>
     );
   }
 }
