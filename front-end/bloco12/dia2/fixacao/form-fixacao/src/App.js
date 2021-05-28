@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Name from './Name.js';
+import Sex from './Sex.js';
+import Describe from './Describe.js';
 import './App.css';
 
 export default class App extends Component {
@@ -16,7 +19,7 @@ export default class App extends Component {
 
   handleChanges({ target }) {
     const { value, name } = target;
-    
+
     this.setState(() => ({
       [name]: value,
     }));
@@ -26,22 +29,9 @@ export default class App extends Component {
     return (
       <div>
         <form>
-          <label>
-            Nome:
-      <input type="text" name="name" onChange={ this.handleChanges} value={ this.state.name }/>
-          </label>
-          <label>
-            Sexo
-        <select name="sex" value={this.state.sex} onChange={this.handleChanges}>
-              <option selected value="masculino">M</option>
-              <option value="feminino">F</option>
-            </select>
-          </label>
-          <label>
-            Conte um pouco sobre você:
-      <textarea name="describe" value={this.state.describe} onChange={ this.handleChanges }> textarea </textarea>
-          </label>
-          <input type="submit" value="Enviar" />
+          <Name value={ this.state.name } onchange={ this.handleChanges }/>
+          <Sex value={this.state.sex} onchange={this.handleChanges}/>
+          <Describe value={this.state.describe} onchange={this.handleChanges}/>
         </form>
       </div>
     );
