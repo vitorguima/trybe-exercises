@@ -6,32 +6,20 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      nameState: '',
-      sexState: 'masculino',
-      describeState: '',
+      name: '',
+      sex: 'masculino',
+      describe: '',
     }
 
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleSelect = this.handleSelect.bind(this);
-    this.handleTextArea = this.handleTextArea.bind(this);
+    this.handleChanges = this.handleChanges.bind(this);
   }
 
-  handleNameChange(event) {
+  handleChanges({ target }) {
+    const { value, name } = target;
+    
     this.setState(() => ({
-      nameState: event.target.value,
+      [name]: value,
     }));
-  }
-
-  handleSelect(event) {
-    this.setState(() => ({
-      sexState: event.target.value,
-    }))
-  }
-
-  handleTextArea(event) {
-    this.setState(() => ({
-      describeState: event.target.value,
-    }))
   }
 
   render() {
@@ -40,18 +28,18 @@ export default class App extends Component {
         <form>
           <label>
             Nome:
-      <input type="text" name="name" onChange={ this.handleNameChange } value={ this.state.nameState }/>
+      <input type="text" name="name" onChange={ this.handleChanges} value={ this.state.name }/>
           </label>
           <label>
             Sexo
-        <select value={this.state.sexState} onChange={this.handleSelect}>
+        <select name="sex" value={this.state.sex} onChange={this.handleChanges}>
               <option selected value="masculino">M</option>
               <option value="feminino">F</option>
             </select>
           </label>
           <label>
             Conte um pouco sobre você:
-      <textarea value={this.state.describeState} onChange={this.handleTextArea}> textarea </textarea>
+      <textarea name="describe" value={this.state.describe} onChange={ this.handleChanges }> textarea </textarea>
           </label>
           <input type="submit" value="Enviar" />
         </form>
