@@ -27,6 +27,7 @@ export default class Form extends Component {
     this.handlerBlur = this.handlerBlur.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handlerSubmit = this.handlerSubmit.bind(this);
+    this.handlerClear = this.handlerClear.bind(this);
   }
 
   updateState(name, value) {
@@ -67,9 +68,12 @@ export default class Form extends Component {
     this.updateState('enter', 'true')
   }
 
-  handlerSubmit(event) {
-    event.preventDefault();
-    this.updateState('submit', 'true');
+  handlerSubmit() {
+    this.updateState('submition', 'true');
+  }
+
+  handlerClear() {
+    this.setState(INITIAL_STATE);
   }
 
   render() {
@@ -82,8 +86,9 @@ export default class Form extends Component {
         onblur={ this.handlerBlur }
         entermouse={ this.handleMouseEnter }
         onsubmit={ this.handlerSubmit }
+        onclear={ this.handlerClear }
       />
-      {this.state.submit === 'true' ? <RenderFields values={ this.state } /> : ''}
+      {this.state.submition === 'true' ? <RenderFields values={ this.state } /> : ''}
       </div>
     )
   }

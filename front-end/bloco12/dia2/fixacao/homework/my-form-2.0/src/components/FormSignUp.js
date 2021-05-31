@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class FormSignUp extends Component {
   
   render() {
-    const { onchange, values, onblur, entermouse, onsubmit } = this.props;
+    const { onchange, values, onblur, entermouse, onsubmit, onclear } = this.props;
 
     const brazilianState = ["AC", "AL", "AM", "AP", "BA", "CE", 
     "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", 
@@ -166,11 +166,16 @@ export class FormSignUp extends Component {
        />
        </div>
       </fieldset>
-      <button 
-      type="submit"
-      onClick={onsubmit}>
-        Enviar
-      </button>
+      <input
+      type="button"
+      onClick={onsubmit}
+      value="Submit">
+      </input>
+      <input
+      type="button"
+      onClick={onclear}
+      value="Clear">
+      </input>
       </form>
       </div>
     )
