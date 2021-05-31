@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class FormSignUp extends Component {
   
   render() {
-    const { onchange, values, namechange } = this.props;
+    const { onchange, values, onblur, entermouse, onsubmit } = this.props;
 
     const brazilianState = ["AC", "AL", "AM", "AP", "BA", "CE", 
     "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", 
@@ -25,7 +25,7 @@ export class FormSignUp extends Component {
         type="text"
         maxLength="40"
         value={values.name}
-        onChange={namechange}
+        onChange={onchange}
         required>
       </input>
       </div>
@@ -82,6 +82,7 @@ export class FormSignUp extends Component {
         maxLength="200"
         value={values.city}
         onChange={onchange}
+        onBlur={onblur}
         required>
       </input>
       </div>
@@ -92,7 +93,7 @@ export class FormSignUp extends Component {
       <select
         className="personal-input"
         name="state"
-        value={values.city}
+        value={values.state}
         onChange={onchange}
         required>
           {brazilianState.map((state) => 
@@ -146,6 +147,7 @@ export class FormSignUp extends Component {
          maxLength="40"
          onChange={onchange}
          value={values.job}
+         onMouseOver={entermouse}
          required
        />
        </div>
@@ -164,6 +166,11 @@ export class FormSignUp extends Component {
        />
        </div>
       </fieldset>
+      <button 
+      type="submit"
+      onClick={onsubmit}>
+        Enviar
+      </button>
       </form>
       </div>
     )
