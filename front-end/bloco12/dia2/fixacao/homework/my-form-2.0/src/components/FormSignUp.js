@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 export class FormSignUp extends Component {
   
   render() {
-    const { onchange, states } = this.props;
+    const { onchange, values, namechange } = this.props;
 
-    const brazilianState = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"]
+    const brazilianState = ["AC", "AL", "AM", "AP", "BA", "CE", 
+    "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", 
+    "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"]
 
     return (
       <div className="signup-container">
@@ -22,8 +24,8 @@ export class FormSignUp extends Component {
         name="name"
         type="text"
         maxLength="40"
-        value={states.name}
-        onChange={onchange}
+        value={values.name}
+        onChange={namechange}
         required>
       </input>
       </div>
@@ -36,7 +38,7 @@ export class FormSignUp extends Component {
         name="email"
         type="email"
         maxLength="50"
-        value={states.email}
+        value={values.email}
         onChange={onchange}
         required>
       </input>
@@ -50,7 +52,7 @@ export class FormSignUp extends Component {
         name="cpf"
         type="text"
         maxLength="11"
-        value={states.cpf}
+        value={values.cpf}
         onChange={onchange}
         required>
       </input>
@@ -64,7 +66,7 @@ export class FormSignUp extends Component {
         name="address"
         type="text"
         maxLength="200"
-        value={states.address}
+        value={values.address}
         onChange={onchange}
         required>
       </input>
@@ -78,7 +80,7 @@ export class FormSignUp extends Component {
         name="city"
         type="text"
         maxLength="200"
-        value={states.city}
+        value={values.city}
         onChange={onchange}
         required>
       </input>
@@ -90,7 +92,7 @@ export class FormSignUp extends Component {
       <select
         className="personal-input"
         name="state"
-        value={states.city}
+        value={values.city}
         onChange={onchange}
         required>
           {brazilianState.map((state) => 
@@ -104,7 +106,7 @@ export class FormSignUp extends Component {
         <div 
         className="home-type"
         onChange={onchange}
-        value={states.home}> 
+        value={values.home}> 
           <input 
             type="radio" 
             value="house"
@@ -130,9 +132,9 @@ export class FormSignUp extends Component {
          name="resume"
          maxLength="1000"
          onChange={onchange}
-         value={states.resume}
-         required>
-       </textarea>
+         value={values.resume}
+         required
+       />
        </div>
        <div className="form-input">
        <label htmlFor="job">
@@ -143,9 +145,9 @@ export class FormSignUp extends Component {
          name="job"
          maxLength="40"
          onChange={onchange}
-         value={states.job}
-         required>
-       </textarea>
+         value={values.job}
+         required
+       />
        </div>
        <div className="form-input">
        <label htmlFor="email">
@@ -157,9 +159,9 @@ export class FormSignUp extends Component {
          type="text"
          maxLength="500"
          onChange={onchange}
-         value={states.description}
-         required>
-       </input>
+         value={values.description}
+         required
+       />
        </div>
       </fieldset>
       </form>

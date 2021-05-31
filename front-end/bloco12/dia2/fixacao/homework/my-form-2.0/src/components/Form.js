@@ -20,14 +20,24 @@ export default class Form extends Component {
   
     this.state = INITIAL_STATE;
     this.handlerChanger = this.handlerChanger.bind(this);
+    this.handlerName = this.handlerName.bind(this);
   }
 
-  handlerChanger({ target }) {
-    const { name, value } = target;
+  handlerChanger(name, value) {
 
     this.setState(() => ({
       [name]: value,
     }))
+  }
+
+  handlerName({ target }) {
+    const { name, value } = target;
+
+    if (name === 'name') {
+      value = value.toUpperCase()
+    }
+
+    this.handlerChanger(name, value);
   }
 
   render() {
@@ -35,7 +45,7 @@ export default class Form extends Component {
     return (
       <FormSignUp 
         onchange={ this.handlerChanger } 
-        states={ this.state }
+        values={ this.state }
       />
     )
   }
