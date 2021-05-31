@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../Form.css'
 
 export class FormSignUp extends Component {
   
@@ -13,8 +14,8 @@ export class FormSignUp extends Component {
       <div className="signup-container">
       <form className="signup-form">
       <fieldset className="fieldset-inputs">
-      <h3>Personal Data</h3>
-      <p>Fill the fields below with your personal information</p>
+      <h3 className="form-title">Informações pessoais</h3>
+      <p className="form-subtitle">Preencha os campos abaixo com as suas informações pessoais</p>
       <div className="form-input">
       <label htmlFor="name">
         Nome
@@ -121,9 +122,11 @@ export class FormSignUp extends Component {
         </div>
       </div>
       </fieldset>
+      <br />
+      <br />
       <fieldset className="fieldset-inputs">
-       <h3>Professional Data</h3>
-       <p>Fill the fields below with your previous professional information</p>
+       <h3 className="form-title">Informações profissionais</h3>
+       <p className="form-subtitle">Preencha os campos abaixo com as suas informações profissionais</p>
        <div className="form-input">
        <label htmlFor="resume">
          Resumo do currículo
@@ -166,16 +169,22 @@ export class FormSignUp extends Component {
        />
        </div>
       </fieldset>
+      <br />
+      <br />
+      <div className="buttons-wrapper">
       <input
+      className="submit-button"
       type="button"
       onClick={onsubmit}
       value="Submit">
       </input>
       <input
+      className="clear-button"
       type="button"
       onClick={onclear}
       value="Clear">
       </input>
+      </div>
       </form>
       </div>
     )
